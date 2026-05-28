@@ -1,1 +1,47 @@
+/* 1. 기본 스타일 및 변수 설정 */
+:root {
+    --primary: #1a2a6c;   /* 신뢰감을 주는 짙은 네이비 */
+    --secondary: #b8860b; /* 전문성을 상징하는 골드 */
+    --light: #f4f4f4;
+    --dark: #333333;
+    --white: #ffffff;
+}
 
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Pretendard', 'Malgun Gothic', sans-serif; line-height: 1.6; color: var(--dark); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* 2. 헤더 및 네비게이션 */
+.header { background: var(--white); padding: 20px 0; border-bottom: 2px solid var(--primary); }
+.nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+.nav-menu { list-style: none; display: flex; gap: 20px; }
+.nav-menu a { text-decoration: none; color: var(--dark); font-weight: 600; }
+
+/* 3. 히어로 섹션 (메인 배너 및 상담창) */
+.hero { background: var(--primary); color: var(--white); padding: 80px 0; }
+.hero-wrapper { display: grid; grid-template-columns: 1fr 400px; gap: 40px; align-items: center; }
+.hero-text h1 { font-size: 2.5rem; margin-bottom: 20px; }
+.consult-form { background: var(--white); padding: 30px; border-radius: 8px; color: var(--dark); }
+.consult-form input, .consult-form select, .consult-form textarea { 
+    width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; 
+}
+.btn-submit { width: 100%; background: var(--secondary); color: var(--white); padding: 12px; border: none; cursor: pointer; font-weight: bold; }
+
+/* 4. 공통 섹션 스타일 */
+.section { padding: 60px 0; }
+.section-title { text-align: center; font-size: 2rem; margin-bottom: 40px; color: var(--primary); }
+
+/* 5. 서비스 그리드 (업무 분야) */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.service-item { padding: 30px; border: 1px solid #eee; border-radius: 8px; transition: 0.3s; }
+.service-item:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: var(--secondary); }
+
+/* 6. 푸터 */
+.footer { background: var(--dark); color: var(--white); padding: 40px 0; text-align: center; }
+
+/* 7. 반응형 디자인 */
+@media (max-width: 992px) {
+    .hero-wrapper { grid-template-columns: 1fr; }
+    .hero-text { text-align: center; }
+}
