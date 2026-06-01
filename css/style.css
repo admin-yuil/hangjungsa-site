@@ -396,6 +396,7 @@ strong {
 }
 
 .hero-content {
+    width: 100%;
     max-width: 700px;
 }
 
@@ -439,7 +440,8 @@ strong {
    
     width: 100%;
     max-width: 420px;
-    margin: 0 auto;
+    margin-left: auto;
+    justify-self: end;
 }
 
 .card-title {
