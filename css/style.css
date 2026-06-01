@@ -383,8 +383,8 @@ strong {
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 4rem;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 3rem;
     align-items: center;
     z-index: 2;
 }
