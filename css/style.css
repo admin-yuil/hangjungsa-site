@@ -388,6 +388,11 @@ strong {
     gap: 3rem;
     align-items: center;
     z-index: 2;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .hero-content {
@@ -1517,7 +1522,7 @@ strong {
    ========================================================================== */
 
 /* A. 테블릿 가로 & 노트북 (1024px 이하) */
-@screen-lg and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     html {
         font-size: 15px;
     }
