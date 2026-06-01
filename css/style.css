@@ -383,14 +383,15 @@ strong {
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1.3fr 0.9fr;
-    gap: 2.5rem;
+    grid-template-columns: minmax(0, 700px) minmax(350px, 420px);
+    justify-content: center;
+    gap: 3rem;
     align-items: center;
     z-index: 2;
 }
 
 .hero-content {
-    max-width: 650px;
+    max-width: 700px;
 }
 
 .hero-title {
