@@ -426,6 +426,8 @@ strong {
     padding: 2.2rem;
     box-shadow: var(--shadow-lg);
     width: 100%;
+    max-width: 380px;
+    margin-left: auto;
 }
 
 .card-title {
