@@ -383,7 +383,7 @@ strong {
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
+    grid-template-columns: 1.5fr 0.6fr;
     gap: 3rem;
     align-items: center;
     z-index: 2;
@@ -410,8 +410,10 @@ strong {
 }
 
 .hero-buttons {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    max-width: 700px;
 }
 
 /* Hero Quick Consultation Form Card */
