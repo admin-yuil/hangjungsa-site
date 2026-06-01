@@ -1734,3 +1734,24 @@ strong {
         gap: 2rem;
     }
 }
+.btn-kakao {
+    background: #FEE500;
+    color: #191919;
+    border: none;
+}
+
+.btn-kakao:hover {
+    background: #f4da00;
+    color: #191919;
+}
+
+.btn-email {
+    background: #0d6efd;
+    color: white;
+    border: none;
+}
+
+.btn-email:hover {
+    background: #0b5ed7;
+    color: white;
+}
