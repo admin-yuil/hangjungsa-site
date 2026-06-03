@@ -383,16 +383,16 @@ strong {
 
 .hero-container {
     display: grid;
-    grid-template-columns: minmax(0, 700px) minmax(350px, 420px);
-    justify-content: center;
-    gap: 3rem;
+    grid-template-columns: 1fr 380px;
+    gap: 4rem;
     align-items: center;
-    z-index: 2;
 
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
+
+    z-index: 2;
 }
 
 .hero-content {
