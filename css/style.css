@@ -383,20 +383,20 @@ strong {
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1fr 350px;
-    gap: 3rem;
+    grid-template-columns: 1fr 380px;
+    gap: 4rem;
  
     width: 100%;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
 
     align-items: center;
 }
 
 .hero-content {
     width: 100%;
-    max-width: 550px;
+    max-width: none;
 }
 
 .hero-title {
@@ -419,7 +419,7 @@ strong {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 0.8rem;
-   justify-content: start;
+    justify-content: start;
 }
 
 .hero-buttons .btn {
