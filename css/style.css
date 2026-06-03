@@ -419,7 +419,6 @@ strong {
     display: grid;
     grid-template-columns: repeat(2, max-content);
     gap: 0.8rem;
-    justify-content: start;
 }
 
 .hero-buttons .btn {
