@@ -385,12 +385,12 @@ strong {
     display: grid;
     grid-template-columns: minmax(0, 700px) 350px;
     gap: 4rem;
-
+ 
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding-left: 40px;
-    
+    padding: 0 40px;
+
     align-items: center;
 }
 
