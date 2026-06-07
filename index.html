@@ -437,7 +437,7 @@
                         </div>
                     </div>
                     <!-- Detailed Consultation Form -->
-                   <div class="consult-form-container reveal-right">
+<div class="consult-form-container reveal-right">
                         <h3 class="form-heading">행정민원 무료 상담 예약</h3>
                         <form id="detail-consult-form" class="detail-form" onsubmit="return false;">
                             <div class="form-row">
@@ -446,7 +446,7 @@
                                     <input type="text" id="client-name" required placeholder="성함을 입력하세요">
                                 </div>
                                 <div class="form-group">
-                                    <label for="client-phone">連絡先 (연락처) *</label>
+                                    <label for="client-phone">연락처 *</label>
                                     <input type="tel" id="client-phone" required placeholder="휴대폰 번호를 입력하세요">
                                 </div>
                             </div>
@@ -474,21 +474,17 @@
                                 <label for="agree-privacy">[필수] 개인정보 수집 및 이용 동의에 대해 확인하고 동의합니다.</label>
                             </div>
                             
-                            <div style="display: flex; gap: 0.8rem; margin-top: 1.5rem;">
-                                <button type="button" onclick="submitDetailedForm('kakao')" style="flex: 1; background-color: #FEE500; color: #191919; border: none; padding: 1rem; font-size: 1.05rem; font-weight: bold; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 1.2em; height: 1.2em;"><path d="M12 3c-5.523 0-10 3.806-10 8.5 0 2.99 1.808 5.617 4.557 7.15a1 1 0 0 1 .45.823l-.224 2.124a.5.5 0 0 0 .736.495l2.946-1.748a1 1 0 0 1 .517-.144c.649.07 1.314.1 2.014.1 5.523 0 10-3.806 10-8.5S17.523 3 12 3Z"/></svg>
-                                    카카오톡 신청
-                                </button>
-                                <button type="button" onclick="submitDetailedForm('sms')" style="flex: 1; background-color: #1e293b; color: white; border: 1px solid rgba(255,255,255,0.1); padding: 1rem; font-size: 1.05rem; font-weight: bold; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                            <div style="margin-top: 1.5rem;">
+                                <button type="button" onclick="submitDetailedForm()" style="width: 100%; background-color: #1e293b; color: white; border: 1px solid rgba(255,255,255,0.1); padding: 1.1rem; font-size: 1.1rem; font-weight: bold; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width: 1.2em; height: 1.2em;"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.824-1.435-5.125-3.736-6.565-6.565l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.107a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v1.25z"/></svg>
-                                    문자로 신청
+                                    문자로 무료 상담 신청하기
                                 </button>
                             </div>
                         </form>
                     </div>
 
                     <script>
-                    function submitDetailedForm(targetType) {
+                    function submitDetailedForm() {
                         const name = document.getElementById('client-name').value.trim();
                         const phone = document.getElementById('client-phone').value.trim();
                         const email = document.getElementById('client-email').value.trim();
@@ -505,20 +501,15 @@
                             return;
                         }
 
-                        // 가독성을 극대화한 행정 민원 신청서 포맷팅
+                        // 가독성을 극대화한 행정 민원 신청서 문자 포맷팅
                         const mailBody = `[유일행정사사무소 무료상담 접수]\n- 성함: ${name}\n- 연락처: ${phone}\n- 이메일: ${email || '미입력'}\n- 신청분야: ${service}\n- 민원내용:\n${message}`;
                         const encodedText = encodeURIComponent(mailBody);
 
-                        if (targetType === 'kakao') {
-                            const kakaoIntent = `intent://pf.kakao.com/_pmytn/chat?text=${encodedText}#Intent;scheme=https;package=com.kakao.talk;end`;
-                            window.location.href = kakaoIntent;
-                        } else if (targetType === 'sms') {
-                            const smsIntent = `sms:010-5894-4988?body=${encodedText}`;
-                            window.location.href = smsIntent;
-                        }
+                        // SMS 주소 호출
+                        const smsIntent = `sms:010-5894-4988?body=${encodedText}`;
+                        window.location.href = smsIntent;
                     }
-                    </script>                </div>
-            </div>
+                    </script>            </div>
         </section>
         <!-- Location Section & Geo-SEO Map -->
         <section class="contact section" id="contact">
