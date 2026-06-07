@@ -992,12 +992,31 @@ strong {
 }
 
 .map-container {
+    position: relative;
     height: 100%;
     min-height: 480px;
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--color-slate-200);
+}
+.office-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+
+    background: rgba(255,255,255,0.96);
+    padding: 16px 20px;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 320px;
+
+    color: #1e293b;
 }
 
 /* simulated high fidelity premium map */
