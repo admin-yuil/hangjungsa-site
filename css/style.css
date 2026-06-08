@@ -1791,3 +1791,40 @@ strong {
     background: #0b5ed7;
     color: white;
 }
+/* ===============================
+   업무분야 카드 높이 통일
+   =============================== */
+
+.services-grid{
+    align-items: stretch;
+}
+
+.service-card{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+.service-title{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+}
+
+.service-text{
+    min-height:120px;
+}
+
+.service-bullets{
+    flex-grow:1;
+}
+
+.service-buttons{
+    margin-top:auto;
+    padding-top:15px;
+}
+
+.service-buttons .btn{
+    width:100%;
+    text-align:center;
+}
